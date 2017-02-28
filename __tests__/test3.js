@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Wrapper, { List, Scroll, ele } from '../example/index3';
 import { deepCompare } from "../lib";
+import Immutable from 'immutable';
 
 
 function makeInstance(state, props) {
@@ -28,16 +29,14 @@ var listEle = list.instance()._reactInternalInstance._currentElement,
 	scrollEle = scroll.instance()._reactInternalInstance._currentElement,
 	newEle = <p></p>;
 
-var instance = makeInstance(scroll.state(), {children: listEle});
+var instance = makeInstance(scroll.state(), {children: Immutable.fromJS(listEle)});
 
 test('all data is the same', () => {
 
-	// console.log(instance);
-
 	let result = deepCompare(instance, {
-		children: listEle
+		children: Immutable.fromJS(listEle)
 	}, {
-		ele: ele
+		ele: Immutable.fromJS(ele)
 	});
 
 	expect(result).toBe(false);
@@ -47,9 +46,9 @@ test('all data is the same', () => {
 test('props.children is different', () => {
 
 	let result = deepCompare(instance, {
-		children: scrollEle
+		children: Immutable.fromJS(scrollEle)
 	}, {
-		ele: ele
+		ele: Immutable.fromJS(ele)
 	});
 
 	expect(result).toBe(true);
@@ -59,9 +58,9 @@ test('props.children is different', () => {
 test('state.ele is different', () => {
 
 	let result = deepCompare(instance, {
-		children: listEle
+		children: Immutable.fromJS(listEle)
 	}, {
-		ele: newEle
+		ele: Immutable.fromJS(newEle)
 	});
 
 	expect(result).toBe(true);

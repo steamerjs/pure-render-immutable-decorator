@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Wrapper, { List } from '../example/index1';
 import { deepCompare } from "../lib";
+import Immutable from 'immutable';
 
 
 function makeInstance(state, props) {
@@ -118,72 +119,72 @@ test('all data is the same', () => {
 	let result = deepCompare(instance, {
 		title: "dota2 hero",
 		subtitle: "Agility",
-		heroes: AgilityHeroes1,
+		heroes: Immutable.fromJS(AgilityHeroes1),
 	}, {
 		subtitle: "Strength",
-		heroes: Strengthheroes1
+		heroes: Immutable.fromJS(Strengthheroes1)
+	});
+
+	expect(result).toBe(false);
+
+});
+
+test('props.title different -- String', () => {
+
+	let result = deepCompare(instance, {
+		title: "dota2 heroes",
+		subtitle: "Agility",
+		heroes: Immutable.fromJS(AgilityHeroes1),
+	}, {
+		subtitle: "Strength",
+		heroes: Immutable.fromJS(Strengthheroes1)
 	});
 
 	expect(result).toBe(true);
 
 });
 
-// test('props.title different -- String', () => {
+test('state.subtitle different -- String', () => {
 
-// 	let result = deepCompare(instance, {
-// 		title: "dota2 heroes",
-// 		subtitle: "Agility",
-// 		heroes: AgilityHeroes1,
-// 	}, {
-// 		subtitle: "Strength",
-// 		heroes: Strengthheroes1
-// 	});
+	let result = deepCompare(instance, {
+		title: "dota2 hero",
+		subtitle: "Agility",
+		heroes: Immutable.fromJS(AgilityHeroes1),
+	}, {
+		subtitle: "Strengths",
+		heroes: Immutable.fromJS(Strengthheroes1)
+	});
 
-// 	expect(result).toBe(true);
+	expect(result).toBe(true);
 
-// });
+});
 
-// test('state.subtitle different -- String', () => {
+test('props.heroes different -- Array & Object', () => {
 
-// 	let result = deepCompare(instance, {
-// 		title: "dota2 hero",
-// 		subtitle: "Agility",
-// 		heroes: AgilityHeroes1,
-// 	}, {
-// 		subtitle: "Strengths",
-// 		heroes: Strengthheroes1
-// 	});
+	let result = deepCompare(instance, {
+		title: "dota2 hero",
+		subtitle: "Agility",
+		heroes: Immutable.fromJS(AgilityHeroes2),
+	}, {
+		subtitle: "Strength",
+		heroes: Immutable.fromJS(Strengthheroes1)
+	});
 
-// 	expect(result).toBe(true);
+	expect(result).toBe(true);
 
-// });
+});
 
-// test('props.heroes different -- Array & Object', () => {
+test('state.heroes different -- Array & Object', () => {
 
-// 	let result = deepCompare(instance, {
-// 		title: "dota2 hero",
-// 		subtitle: "Agility",
-// 		heroes: AgilityHeroes2,
-// 	}, {
-// 		subtitle: "Strength",
-// 		heroes: Strengthheroes1
-// 	});
+	let result = deepCompare(instance, {
+		title: "dota2 hero",
+		subtitle: "Agility",
+		heroes: Immutable.fromJS(AgilityHeroes1),
+	}, {
+		subtitle: "Strength",
+		heroes: Immutable.fromJS(Strengthheroes2)
+	});
 
-// 	expect(result).toBe(true);
+	expect(result).toBe(true);
 
-// });
-
-// test('state.heroes different -- Array & Object', () => {
-
-// 	let result = deepCompare(instance, {
-// 		title: "dota2 hero",
-// 		subtitle: "Agility",
-// 		heroes: AgilityHeroes1,
-// 	}, {
-// 		subtitle: "Strength",
-// 		heroes: Strengthheroes2
-// 	});
-
-// 	expect(result).toBe(true);
-
-// });
+});

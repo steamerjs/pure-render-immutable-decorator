@@ -18,6 +18,7 @@ import { is } from 'immutable';
  * Returns true when the values of all keys are strictly equal.
  */
 function deepEqual(objA, objB) {
+
     if (objA === objB || is(objA, objB)) {
         return true;
     }

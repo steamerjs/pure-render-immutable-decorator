@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import pureRender from '../lib/';
+import Immutable from 'immutable';
 
 export function add() {
 
@@ -14,8 +15,8 @@ export class List extends Component {
 		this.state = {
 			number: 1234567890,
 			bool: true,
-			day: new Date("2017-01-19"),
-			add: add
+			day: Immutable.fromJS(new Date("2017-01-19")),
+			add: Immutable.fromJS(add)
 		};
 
 	}
@@ -44,7 +45,7 @@ export default class Wrapper extends Component {
 		this.state = {
 			number: 1234567890,
 			bool: true,
-			day: new Date("2017-01-19")
+			day: Immutable.fromJS(new Date("2017-01-19"))
 		};
 	}
 
@@ -66,7 +67,7 @@ export default class Wrapper extends Component {
 	        		number={number}
 	        		bool={bool}
 	        		day={day}
-	        		add={add}
+	        		add={Immutable.fromJS(add)}
 	        	/>
 	        </div>
 		);

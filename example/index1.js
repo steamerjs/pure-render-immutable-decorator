@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import pureRender from '../lib/';
+import Immutable from 'immutable';
 
 
 @pureRender
@@ -10,7 +11,7 @@ export class List extends Component {
 
 		this.state = {
 			subtitle: "Strength",
-			heroes: [
+			heroes: Immutable.fromJS([
 				{
 					id: 1,
 					name: "Earthshaker"
@@ -27,7 +28,7 @@ export class List extends Component {
 					id: 4,
 					name: "Kunkka"
 				},
-			]
+			])
 		};
 
 	}
@@ -60,7 +61,7 @@ export class List extends Component {
 		        	{
 		        		heroes.map((item) => {
 		        			return (
-		        				<li key={item.id}>{item.name}</li>
+		        				<li key={item.get('id')}>{item.get('name')}</li>
 		        			);
 		        		})
 		        	}
@@ -70,7 +71,7 @@ export class List extends Component {
 		        	{
 		        		this.state.heroes.map((item) => {
 		        			return (
-		        				<li key={item.id}>{item.name}</li>
+		        				<li key={item.get('id')}>{item.get('name')}</li>
 		        			);
 		        		})
 		        	}
@@ -88,7 +89,7 @@ export default class Wrapper extends Component {
 		this.state = {
 			title: "dota2 hero",
 			subtitle: "Agility",
-			heroes: [
+			heroes: Immutable.fromJS([
 				{
 					id: 1,
 					name: "Anti-Mage"
@@ -105,7 +106,7 @@ export default class Wrapper extends Component {
 					id: 4,
 					name: "Minana"
 				},
-			]
+			])
 		};
 	}
 

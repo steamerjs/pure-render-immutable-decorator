@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Wrapper, { List, add } from '../example/index2';
 import { deepCompare } from "../lib";
+import Immutable from 'immutable';
 
 
 function makeInstance(state, props) {
@@ -23,9 +24,9 @@ var number1 = 1234567890,
 	bool1 = true,
 	number2 = 123456789,
 	bool2 = false,
-	day1 = new Date("2017-01-19"),
-	day2 = new Date("2017-01-20"),
-	func = function update() {};
+	day1 = Immutable.fromJS(new Date("2017-01-19")),
+	day2 = Immutable.fromJS(new Date("2017-01-20")),
+	func = Immutable.fromJS(function update() {});
 
 var instance = makeInstance(list.state(), wrapper.find(List).props());
 
