@@ -62,3 +62,6 @@ class List extends Component {
 }
 
 ```
+
+### Non-Immutable Version
+* [pure-render-deepCompare-decorator](https://github.com/SteamerTeam/pure-render-deepCompare-decorator)
