@@ -62,7 +62,3 @@ class List extends Component {
 }
 
 ```
-
-
-### Changelog
-- v1.0.0 (2017/2/28) 初版
