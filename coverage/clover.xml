@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1488387954227" clover="3.2.0">
+  <project timestamp="1488387954227" name="All files">
+    <metrics statements="48" coveredstatements="40" conditionals="24" coveredconditionals="19" methods="30" coveredmethods="18" elements="102" coveredelements="77" complexity="0" loc="48" ncloc="48" packages="2" files="4" classes="4">
+      <package name="example.src">
+        <metrics statements="32" coveredstatements="28" conditionals="2" coveredconditionals="2" methods="26" coveredmethods="15"/>
+        <file name="index1.js" path="/Users/lcxfs1991/web/pure-render-immutable-decorator/example/src/index1.js">
+          <metrics statements="14" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="5"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="48" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="56" count="1" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="73" count="4" type="stmt"/>
+          <line num="88" count="1" type="stmt"/>
+          <line num="89" count="1" type="stmt"/>
+          <line num="118" count="0" type="stmt"/>
+          <line num="127" count="1" type="stmt"/>
+          <line num="129" count="1" type="stmt"/>
+        </file>
+        <file name="index2.js" path="/Users/lcxfs1991/web/pure-render-immutable-decorator/example/src/index2.js">
+          <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+        </file>
+        <file name="index3.js" path="/Users/lcxfs1991/web/pure-render-immutable-decorator/example/src/index3.js">
+          <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="6"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="55" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src">
+        <metrics statements="16" coveredstatements="12" conditionals="22" coveredconditionals="17" methods="4" coveredmethods="3"/>
+        <file name="index.js" path="/Users/lcxfs1991/web/pure-render-immutable-decorator/src/index.js">
+          <metrics statements="16" coveredstatements="12" conditionals="22" coveredconditionals="17" methods="4" coveredmethods="3"/>
+          <line num="22" count="27" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="26" count="27" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="30" count="27" type="stmt"/>
+          <line num="31" count="27" type="stmt"/>
+          <line num="33" count="27" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="38" count="27" type="stmt"/>
+          <line num="39" count="27" type="stmt"/>
+          <line num="40" count="61" type="stmt"/>
+          <line num="41" count="14" type="stmt"/>
+          <line num="45" count="13" type="stmt"/>
+          <line num="53" count="17" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="73" count="3" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>
