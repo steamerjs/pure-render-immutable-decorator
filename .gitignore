@@ -1,7 +1,9 @@
 node_modules
-.webpack_cache
-yarn-error.log
-npm-debug.log
-jest
-dev
+node_modules.7z
+.svn
 .DS_Store
+.webpack_cache
+.happypack
+npm-debug.log
+yarn-error.log
+jest

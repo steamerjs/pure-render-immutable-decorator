@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import pureRender from '../lib/';
+import pureRender from '../../src/';
 import Immutable from 'immutable';
 
 export const ele = <div></div>;

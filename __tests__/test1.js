@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Wrapper, { List } from '../example/index1';
-import { deepCompare } from "../lib";
+import Wrapper, { List } from '../example/src/index1';
+import { deepCompare } from "../src";
 import Immutable from 'immutable';
 
 
